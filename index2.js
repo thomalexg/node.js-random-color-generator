@@ -1,6 +1,8 @@
 let markup = '';
 
 let color = 'green';
+const hexcode = '#bdb5ff';
+let count = 0;
 
 for (let row = 0; row < 9; row++) {
   if (row < 3 || row > 5) {
@@ -8,25 +10,22 @@ for (let row = 0; row < 9; row++) {
       markup += '#';
     }
   } else if (row === 3 || row === 5) {
-    for (let col = 0; col < 32; col++) {
+    for (let col = 0; col < 31; col++) {
       if (col < 3 || col > 28) {
         markup += '#';
       } else {
-        markup += '+';
+        markup += ' ';
       }
     }
   } else {
-    for (let col = 0; col < 32; col++) {
+    for (let col = 0; col < 31; col++) {
       if (col < 3 || col > 28) {
         markup += '#';
-      } else if (col < 12 || col > 19) {
-        markup += '+';
-      } else {
-        let str = '#bdb5ff';
-
-        for (let hex = 0; hex < 7; hex++) {
-          markup += str[hex];
-        }
+      } else if (col < 12 || col > 18) {
+        markup += ' ';
+      } else if (col >= 12 && col <= 18) {
+        markup += hexcode[count];
+        count++;
       }
     }
   }
