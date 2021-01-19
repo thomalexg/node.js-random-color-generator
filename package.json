@@ -1,0 +1,12 @@
+{
+  "name": "node.js-random-color-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thomalexg/node.js-random-color-generator.git",
+  "author": "thomalex",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "randomcolor": "^0.6.2"
+  }
+}
