@@ -1,11 +1,11 @@
 const randomColor = require('randomcolor');
 const chalk = require('chalk');
 
-const random = (_) => {
+const random = () => {
   let renderColor = null;
-  let renerAsk = null;
-  let color = process.argv[2];
-  let luminosity = process.argv[3];
+  let renderAsk = null;
+  const color = process.argv[2];
+  const luminosity = process.argv[3];
   if (color === 'ask') {
     renderAsk = 'Type in a color';
   } else {
@@ -21,7 +21,6 @@ const random = (_) => {
 
 let markup = '';
 
-let color = 'green';
 const hexcode = random();
 let count = 0;
 if (hexcode !== 'Type in a color') {
